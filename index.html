@@ -6,7 +6,7 @@
     <title>Personal Portfolio</title>
     <meta
       name="description"
-      content="黑色电影感个人作品集，包含简介、项目、时间线与联系方式。"
+      content="季小岚的个人作品集，包含简介、项目、时间线与联系方式。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,7 +42,7 @@
         <section class="sidebar-profile">
           <img class="sidebar-avatar" src="me.jpg" alt="个人头像" />
           <div class="sidebar-profile-copy">
-            <p class="sidebar-title">季小岚 / ARCHIVE</p>
+            <p class="sidebar-title">季小岚 / Xiaolan Ji</p>
             <p class="sidebar-copy">一张自画像，上面是一位年轻的游戏环境设计师，眼神充满自信。</p>
           </div>
         </section>
@@ -84,12 +84,13 @@
           <p class="eyebrow">PORTFOLIO ARCHIVE</p>
           <h1>来看看我能做些什么吧。</h1>
           <p class="hero-copy">
-            这是我的个人作品集首页。个人作品部分点击可以查看作品细节，时间线部分包含团队作品与合作经验。左上角菜单书签方便快速跳转。
+            这是我的个人作品集首页。个人作品部分点击可以查看作品细节，视频在作品底部。时间线部分包含团队作品与合作经验，左上角菜单书签方便快速跳转。
+          </p>
 
           <div class="hero-meta">
             <div>
               <span>岗位技能</span>
-              <strong>设计 / 开发 / 创作</strong>
+              <strong>环境美术 / PBR资产生产 / 工具开发</strong>
             </div>
             <div>
               <span>视觉主题</span>
@@ -118,25 +119,52 @@
           <h2>个人项目</h2>
           
           <div class="projects-grid">
-            <div class="project-item">
+            <div
+              class="project-item"
+              role="button"
+              tabindex="0"
+              data-project-title="PCG 程序化建筑"
+              data-project-intro="PCG程序化建筑，自制PBR资产，并带有可拓展接口面向未来美学调整。"
+              data-project-intro-detail="从设计到落地的全流程程序化完整建筑资产制作，包含PBR流程建筑构件制作，建筑参数化，可拓展接口，目标是保证美术风格与团队设计文档统一的同时提高关卡搭建效率。"
+              data-project-images="picture/project/PCG-1.png|picture/project/PCG-2.png|picture/project/PCG-3.png|picture/project/PCG-4.png|picture/project/PCG-5.png|picture/PCG building.png"
+              data-project-link="https://drive.google.com/file/d/1_E7jsTi-IM5LL9n1Y_e1i91EyD7cphr1/view?usp=sharing"
+              data-project-link-text="资产搭建全流程"
+            >
               <div class="project-image-wrapper">
-                <img src="picture/PCG building.png" alt="PC Building" class="project-image" />
+                <img src="picture/PCG building.png" alt="PCG 程序化建筑" class="project-image" />
                 <div class="project-overlay">
                   <p class="project-description">PCG程序化建筑，自制PBR资产，并带有可拓展接口面向未来美学调整</p>
                 </div>
               </div>
             </div>
 
-            <div class="project-item">
+            <div
+              class="project-item"
+              role="button"
+              tabindex="0"
+              data-project-title="《寻找幸存者》"
+              data-project-intro="买量资产关卡设计 + 地编 + 短视频PR剪辑与合成，《寻找幸存者》短片。"
+              data-project-intro-detail="从故事板开始，通过UE蓝图类和材质蓝图进行强叙事性和互动性的关卡设计，最终通过PR剪辑与合成完成《寻找幸存者》短片，重点在于通过环境叙事与视觉效果传达故事情感与氛围。具备对既有资产进行修改，使之符合整体要求的能力。"
+              data-project-images="picture/video.png|picture/project/video-1.png|picture/project/video-2.png"
+              data-project-link="https://drive.google.com/file/d/1Q9xZlg8vrn7ZDWj89Dmyu6f52MwauTw0/view?usp=sharing"
+              data-project-link-text="原视频"
+            >
               <div class="project-image-wrapper">
                 <img src="picture/video.png" alt="Video Production" class="project-image" />
                 <div class="project-overlay">
-                  <p class="project-description">买量资产关卡设计 + 地编 + 短视频pr剪辑与合成</p>
+                  <p class="project-description">买量资产关卡设计 + 地编 + 短视频pr剪辑与合成寻找幸存者短片</p>
                 </div>
               </div>
             </div>
 
-            <div class="project-item">
+            <div
+              class="project-item"
+              role="button"
+              tabindex="0"
+              data-project-title="Beach"
+              data-project-intro="Houdini + Substance Designer + Unreal + Maya + Substance Painter 全流程程序化沙滩项目。"
+              data-project-intro-detail="以程序化地形与材质节点为核心，建立可复用沙滩生态系统，覆盖沙粒层级、潮汐痕迹、植被分布与光照氛围，提升环境真实度与迭代效率。"
+            >
               <div class="project-image-wrapper">
                 <img src="picture/Beach.png" alt="Beach Environment" class="project-image" />
                 <div class="project-overlay">
@@ -145,11 +173,18 @@
               </div>
             </div>
 
-            <div class="project-item">
+            <div
+              class="project-item"
+              role="button"
+              tabindex="0"
+              data-project-title="Port"
+              data-project-intro="（进行中）Maya + Substance Painter + Houdini + Unreal PBR全流程赛博朋克港口环境。"
+              data-project-intro-detail="当前正在推进结构模块库、湿润金属材质组与夜景灯光方案，重点验证赛博朋克视觉叙事下的空间引导与性能预算平衡。"
+            >
               <div class="project-image-wrapper">
                 <img src="picture/Port.png" alt="Port Design" class="project-image" />
                 <div class="project-overlay">
-                  <p class="project-description">港口设施智能设计方案，融合工业美学与可持续发展理念。</p>
+                  <p class="project-description">（进行中）Maya + Substance Painter + Houdini + Unreal PBR全流程赛博朋克港口环境</p>
                 </div>
               </div>
             </div>
@@ -178,13 +213,24 @@
         <article class="content-card contact-card" id="contact">
           <p class="section-tag">04 / CONTACT ME</p>
           <h2>联系方式</h2>
-          <p>把邮箱、GitHub、社交主页或简历链接放在这里，方便快速联系你。</p>
           <div class="contact-links">
-            <a href="mailto:hello@example.com">hello@example.com</a>
+            <a href="mailto:xiaolanj_0309@163.com">xiaolanj_0309@163.com</a>
             <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
         </article>
+      </section>
+    </div>
+
+    <div class="project-modal-backdrop" hidden>
+      <section class="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+        <button class="project-modal-close" type="button" aria-label="关闭项目介绍">×</button>
+        <p class="section-tag">PROJECT INTRO</p>
+        <h3 id="project-modal-title">项目标题</h3>
+        <p id="project-modal-intro">项目介绍</p>
+        <p id="project-modal-intro-detail">项目详细介绍</p>
+        <div id="project-modal-gallery" class="project-modal-gallery" hidden></div>
+        <a id="project-modal-link" class="project-modal-link" href="#" target="_blank" rel="noreferrer" hidden>资产搭建全流程</a>
       </section>
     </div>
 
