@@ -768,10 +768,71 @@ body::after {
   background: rgba(202, 165, 106, 0.12);
 }
 
+.contact-section-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
 .contact-links {
   display: grid;
   gap: 12px;
-  margin-top: 22px;
+  flex: 1;
+}
+
+.like-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 18px 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(202, 165, 106, 0.35);
+  background: rgba(202, 165, 106, 0.07);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+  font-family: "Space Grotesk", sans-serif;
+  min-width: 96px;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.like-btn:hover {
+  border-color: rgba(202, 165, 106, 0.7);
+  background: rgba(202, 165, 106, 0.14);
+  transform: translateY(-2px);
+}
+
+.like-btn:active {
+  transform: scale(0.95);
+}
+
+.like-btn.liked {
+  border-color: rgba(202, 165, 106, 0.9);
+  background: rgba(202, 165, 106, 0.22);
+}
+
+.like-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.like-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.like-count {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "IBM Plex Mono", monospace;
+  color: rgba(202, 165, 106, 0.9);
 }
 
 .contact-links a {
