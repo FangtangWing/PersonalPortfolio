@@ -350,7 +350,7 @@ body::after {
 
 .hero-meta {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
   gap: 14px;
   margin-top: 30px;
 }
@@ -380,6 +380,14 @@ body::after {
   line-height: 1.4;
 }
 
+.hero-meta-wide {
+  grid-column: auto;
+}
+
+.hero-meta-wide strong {
+  white-space: nowrap;
+}
+
 .content-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -397,6 +405,25 @@ body::after {
   margin: 10px 0 14px;
   font-size: clamp(2.2rem, 4vw, 3.4rem);
   line-height: 0.95;
+}
+
+.skill-logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.skill-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.skill-logo-comfy {
+  width: 64px;
+  height: 64px;
 }
 
 .projects-grid {
@@ -515,8 +542,8 @@ body::after {
 }
 
 .project-modal {
-  width: min(560px, calc(100% - 28px));
-  max-height: calc(100vh - 40px);
+  width: min(840px, calc(100% - 28px));
+  max-height: calc(100vh - 32px);
   padding: 24px;
   border-radius: 22px;
   border: 1px solid rgba(202, 165, 106, 0.3);
@@ -571,10 +598,12 @@ body::after {
 
 .project-modal-gallery img {
   width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(10, 12, 16, 0.92);
 }
 
 .project-modal-link {

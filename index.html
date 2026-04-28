@@ -40,7 +40,7 @@
 
       <aside class="sidebar" id="sidebar" aria-hidden="true">
         <section class="sidebar-profile">
-          <img class="sidebar-avatar" src="me.jpg" alt="个人头像" />
+          <img class="sidebar-avatar" src="picture/me.jpg" alt="个人头像" />
           <div class="sidebar-profile-copy">
             <p class="sidebar-title">季小岚 / Xiaolan Ji</p>
             <p class="sidebar-copy">一张自画像，上面是一位年轻的游戏环境设计师，眼神充满自信。</p>
@@ -88,17 +88,13 @@
           </p>
 
           <div class="hero-meta">
-            <div>
+            <div class="hero-meta-wide">
               <span>岗位技能</span>
               <strong>环境美术 / PBR资产生产 / 工具开发</strong>
             </div>
             <div>
-              <span>视觉主题</span>
-              <strong>黑色模式 / 霓虹金属感</strong>
-            </div>
-            <div>
-              <span>交互方式</span>
-              <strong>抽屉菜单 / 锚点导航</strong>
+              <span>开发语言</span>
+              <strong>JAVA/ PYTHON</strong>
             </div>
           </div>
         </section>
@@ -109,9 +105,18 @@
           <p class="section-tag">01 / ABOUT ME</p>
           <h2>个人简介</h2>
           <p>
-            本人目前就读于美国University of Utah的GAMES专业，预计2027年暑假毕业，性格开朗，沟通能力强，具备较强的学习能力。熟练掌握游戏3D环境艺术和美术向技术美术的核心岗位技能。
-            
+            本人目前就读于美国University of Utah的GAMES专业，GPA3.926（前5%），预计2027年暑假毕业。性格开朗，沟通能力强，具备较强的学习能力。熟练掌握游戏3D环境艺术和美术向技术美术的核心岗位技能。
           </p>
+          <div class="skill-logo-row" aria-label="技能软件图标">
+            <img src="picture/logo/uelogo-png_3436652.png" alt="Unreal Engine" class="skill-logo" />
+            <img src="picture/logo/autodesk-maya-icon.png" alt="Maya" class="skill-logo" />
+            <img src="picture/logo/adobe-substance-3d-painter-icon.png" alt="Substance Painter" class="skill-logo" />
+            <img src="picture/logo/houdini_badge_flat.png" alt="Houdini" class="skill-logo" />
+            <img src="picture/logo/adobe-substance-3d-designer-icon.png" alt="Substance Designer" class="skill-logo" />
+            <img src="picture/logo/Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop" class="skill-logo" />
+            <img src="picture/logo/Adobe_Premiere_Pro_CC_2026_icon.svg.png" alt="Premiere Pro" class="skill-logo" />
+            <img src="picture/logo/Comfy_Logo_x512.png" alt="ComfyUI" class="skill-logo skill-logo-comfy" />
+          </div>
         </article>
 
         <article class="content-card projects-card" id="projects">
@@ -124,7 +129,7 @@
               role="button"
               tabindex="0"
               data-project-title="PCG 程序化建筑"
-              data-project-intro="PCG程序化建筑，自制PBR资产，并带有可拓展接口面向未来美学调整。"
+              data-project-intro="PCG程序化建筑，自制PBR墙体资产，并带有可拓展接口面向未来美学调整。"
               data-project-intro-detail="从设计到落地的全流程程序化完整建筑资产制作，包含PBR流程建筑构件制作，建筑参数化，可拓展接口，目标是保证美术风格与团队设计文档统一的同时提高关卡搭建效率。"
               data-project-images="picture/project/PCG-1.png|picture/project/PCG-2.png|picture/project/PCG-3.png|picture/project/PCG-4.png|picture/project/PCG-5.png|picture/PCG building.png"
               data-project-link="https://drive.google.com/file/d/1_E7jsTi-IM5LL9n1Y_e1i91EyD7cphr1/view?usp=sharing"
@@ -143,7 +148,7 @@
               role="button"
               tabindex="0"
               data-project-title="《寻找幸存者》"
-              data-project-intro="买量资产关卡设计 + 地编 + 短视频PR剪辑与合成，《寻找幸存者》短片。"
+              data-project-intro="买量资产关卡设计 + 地编 + PR剪辑最终整合为《寻找幸存者》短片。"
               data-project-intro-detail="从故事板开始，通过UE蓝图类和材质蓝图进行强叙事性和互动性的关卡设计，最终通过PR剪辑与合成完成《寻找幸存者》短片，重点在于通过环境叙事与视觉效果传达故事情感与氛围。具备对既有资产进行修改，使之符合整体要求的能力。"
               data-project-images="picture/video.png|picture/project/video-1.png|picture/project/video-2.png"
               data-project-link="https://drive.google.com/file/d/1Q9xZlg8vrn7ZDWj89Dmyu6f52MwauTw0/view?usp=sharing"
@@ -152,7 +157,7 @@
               <div class="project-image-wrapper">
                 <img src="picture/video.png" alt="Video Production" class="project-image" />
                 <div class="project-overlay">
-                  <p class="project-description">买量资产关卡设计 + 地编 + 短视频pr剪辑与合成寻找幸存者短片</p>
+                  <p class="project-description">买量资产关卡设计 + 地编 + PR剪辑最终整合为《寻找幸存者》短片</p>
                 </div>
               </div>
             </div>
@@ -163,7 +168,10 @@
               tabindex="0"
               data-project-title="Beach"
               data-project-intro="Houdini + Substance Designer + Unreal + Maya + Substance Painter 全流程程序化沙滩项目。"
-              data-project-intro-detail="以程序化地形与材质节点为核心，建立可复用沙滩生态系统，覆盖沙粒层级、潮汐痕迹、植被分布与光照氛围，提升环境真实度与迭代效率。"
+              data-project-intro-detail="在SD里设计沙滩与焦油，水晶，岩石的材质，配合UE材质蓝图实现平铺效果。Maya + Substance Painter 制作PBR遮雨棚资产。在Houdini里制作水晶生成器HDA，程序化沙滩地形，和水晶炸裂效果，并在UE里整合为完整的沙滩环境。"
+              data-project-images="picture/Beach.png|picture/project/Beach-1.png|picture/project/Beach-2.png|picture/project/Beach-3.png|picture/project/Beach-4.png|picture/project/Beach-5.png|picture/project/Beach-6.png|picture/project/beach-7.png"
+              data-project-link="https://drive.google.com/file/d/1JlogMPTMubvZuIJV3evkRkh9LjMAwuC2/view?usp=sharing"
+              data-project-link-text="On the Beach 视频"
             >
               <div class="project-image-wrapper">
                 <img src="picture/Beach.png" alt="Beach Environment" class="project-image" />
@@ -180,6 +188,9 @@
               data-project-title="Port"
               data-project-intro="（进行中）Maya + Substance Painter + Houdini + Unreal PBR全流程赛博朋克港口环境。"
               data-project-intro-detail="当前正在推进结构模块库、湿润金属材质组与夜景灯光方案，重点验证赛博朋克视觉叙事下的空间引导与性能预算平衡。"
+              data-project-images="picture/Port.png"
+              data-project-link="https://drive.google.com/file/d/1JxgfZl4Z5rTS4Q9QmCrBkHUdY2qgotgH/view?usp=sharing"
+              data-project-link-text="Cyberpunk Port（施工中）"
             >
               <div class="project-image-wrapper">
                 <img src="picture/Port.png" alt="Port Design" class="project-image" />
