@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <meta
+      name="description"
+      content="黑色电影感个人作品集，包含简介、项目、时间线与联系方式。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <button
+          class="menu-button"
+          type="button"
+          aria-controls="sidebar"
+          aria-expanded="false"
+          aria-label="打开侧边菜单"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="brand-lockup">
+          <p class="brand-kicker">Xiaolan Ji's Personal Portfolio</p>
+          <p class="brand-subtitle">环境艺术 | 技术美术</p>
+          <p class="brand-contact">xiaolanj_0309@163.com</p>
+        </div>
+      </header>
+
+      <aside class="sidebar" id="sidebar" aria-hidden="true">
+        <section class="sidebar-profile">
+          <img class="sidebar-avatar" src="me.jpg" alt="个人头像" />
+          <div class="sidebar-profile-copy">
+            <p class="sidebar-title">季小岚 / ARCHIVE</p>
+            <p class="sidebar-copy">一张自画像，上面是一位年轻的游戏环境设计师，眼神充满自信。</p>
+          </div>
+        </section>
+
+        <nav class="bookmark-list" aria-label="页面导航">
+          <a href="#about" class="bookmark-link">
+            <span class="bookmark-index">01</span>
+            <span class="bookmark-text">
+              <strong>个人简介</strong>
+              <small>About Me</small>
+            </span>
+          </a>
+          <a href="#projects" class="bookmark-link">
+            <span class="bookmark-index">02</span>
+            <span class="bookmark-text">
+              <strong>个人项目</strong>
+              <small>Personal Projects</small>
+            </span>
+          </a>
+          <a href="#timeline" class="bookmark-link">
+            <span class="bookmark-index">03</span>
+            <span class="bookmark-text">
+              <strong>时间线</strong>
+              <small>My Timeline</small>
+            </span>
+          </a>
+          <a href="#contact" class="bookmark-link">
+            <span class="bookmark-index">04</span>
+            <span class="bookmark-text">
+              <strong>联系方式</strong>
+              <small>Contact Me</small>
+            </span>
+          </a>
+        </nav>
+      </aside>
+
+      <main class="hero">
+        <section class="hero-panel">
+          <p class="eyebrow">PORTFOLIO ARCHIVE</p>
+          <h1>来看看我能做些什么吧。</h1>
+          <p class="hero-copy">
+            这是我的个人作品集首页。个人作品部分点击可以查看作品细节，时间线部分包含团队作品与合作经验。左上角菜单书签方便快速跳转。
+
+          <div class="hero-meta">
+            <div>
+              <span>岗位技能</span>
+              <strong>设计 / 开发 / 创作</strong>
+            </div>
+            <div>
+              <span>视觉主题</span>
+              <strong>黑色模式 / 霓虹金属感</strong>
+            </div>
+            <div>
+              <span>交互方式</span>
+              <strong>抽屉菜单 / 锚点导航</strong>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section class="content-grid">
+        <article class="content-card profile-card" id="about">
+          <p class="section-tag">01 / ABOUT ME</p>
+          <h2>个人简介</h2>
+          <p>
+            本人目前就读于美国University of Utah的GAMES专业，预计2027年暑假毕业，性格开朗，沟通能力强，具备较强的学习能力。熟练掌握游戏3D环境艺术和美术向技术美术的核心岗位技能。
+            
+          </p>
+        </article>
+
+        <article class="content-card projects-card" id="projects">
+          <p class="section-tag">02 / PERSONAL PROJECTS</p>
+          <h2>个人项目</h2>
+          
+          <div class="projects-grid">
+            <div class="project-item">
+              <div class="project-image-wrapper">
+                <img src="picture/PCG building.png" alt="PC Building" class="project-image" />
+                <div class="project-overlay">
+                  <p class="project-description">PCG程序化建筑，自制PBR资产，并带有可拓展接口面向未来美学调整</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-item">
+              <div class="project-image-wrapper">
+                <img src="picture/video.png" alt="Video Production" class="project-image" />
+                <div class="project-overlay">
+                  <p class="project-description">买量资产关卡设计 + 地编 + 短视频pr剪辑与合成</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-item">
+              <div class="project-image-wrapper">
+                <img src="picture/Beach.png" alt="Beach Environment" class="project-image" />
+                <div class="project-overlay">
+                  <p class="project-description">Houdini + Substance Designer + Unreal + Maya + Substance Painter全流程程序化沙滩</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-item">
+              <div class="project-image-wrapper">
+                <img src="picture/Port.png" alt="Port Design" class="project-image" />
+                <div class="project-overlay">
+                  <p class="project-description">港口设施智能设计方案，融合工业美学与可持续发展理念。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-card timeline-card" id="timeline">
+          <p class="section-tag">03 / MY TIMELINE</p>
+          <h2>时间线</h2>
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <span>2026</span>
+              <p>完成个人品牌视觉重构与新的作品集首页。</p>
+            </div>
+            <div class="timeline-item">
+              <span>2025</span>
+              <p>积累多个前端 / 设计 / 内容创作项目经验。</p>
+            </div>
+            <div class="timeline-item">
+              <span>2024</span>
+              <p>建立作品归档方式，开始系统展示成果。</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-card contact-card" id="contact">
+          <p class="section-tag">04 / CONTACT ME</p>
+          <h2>联系方式</h2>
+          <p>把邮箱、GitHub、社交主页或简历链接放在这里，方便快速联系你。</p>
+          <div class="contact-links">
+            <a href="mailto:hello@example.com">hello@example.com</a>
+            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <div class="overlay" hidden></div>
+    <script src="script.js"></script>
+  </body>
+</html>
