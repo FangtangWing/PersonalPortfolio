@@ -3,6 +3,7 @@ const sidebar = document.querySelector('.sidebar');
 const overlay = document.querySelector('.overlay');
 const sidebarLinks = document.querySelectorAll('.bookmark-link');
 const projectItems = document.querySelectorAll('.project-item');
+const timelineItems = document.querySelectorAll('.timeline-entry[data-project-title]');
 const projectModalBackdrop = document.querySelector('.project-modal-backdrop');
 const projectModalTitle = document.querySelector('#project-modal-title');
 const projectModalIntro = document.querySelector('#project-modal-intro');
@@ -16,6 +17,7 @@ if (projectModalBackdrop) {
 }
 
 function setSidebarState(isOpen) {
+  if (!sidebar || !overlay || !menuButton) return;
   sidebar.classList.toggle('is-open', isOpen);
   overlay.classList.toggle('is-visible', isOpen);
   overlay.hidden = !isOpen;
@@ -23,18 +25,26 @@ function setSidebarState(isOpen) {
   sidebar.setAttribute('aria-hidden', String(!isOpen));
 }
 
-menuButton.addEventListener('click', () => {
-  const isOpen = !sidebar.classList.contains('is-open');
-  setSidebarState(isOpen);
-});
+if (menuButton && sidebar) {
+  menuButton.addEventListener('click', () => {
+    const isOpen = !sidebar.classList.contains('is-open');
+    setSidebarState(isOpen);
+  });
+}
 
-overlay.addEventListener('click', () => setSidebarState(false));
+if (overlay) {
+  overlay.addEventListener('click', () => setSidebarState(false));
+}
 
 sidebarLinks.forEach((link) => {
   link.addEventListener('click', () => setSidebarState(false));
 });
 
 function openProjectModal(title, intro, detail, images, link, linkText) {
+  if (!projectModalBackdrop || !projectModalTitle || !projectModalIntro || !projectModalIntroDetail || !projectModalGallery || !projectModalLink) {
+    return;
+  }
+
   projectModalTitle.textContent = title;
   projectModalIntro.textContent = intro;
   projectModalIntroDetail.textContent = detail;
@@ -45,6 +55,9 @@ function openProjectModal(title, intro, detail, images, link, linkText) {
       const img = document.createElement('img');
       img.src = src;
       img.alt = `${title} 详情图`;
+      if (src.includes('LV-4.jpeg')) {
+        img.classList.add('double-height-image');
+      }
       projectModalGallery.appendChild(img);
     });
     projectModalGallery.hidden = false;
@@ -64,10 +77,11 @@ function openProjectModal(title, intro, detail, images, link, linkText) {
 }
 
 function closeProjectModal() {
+  if (!projectModalBackdrop) return;
   projectModalBackdrop.hidden = true;
 }
 
-projectItems.forEach((item) => {
+function bindModalTrigger(item) {
   const title = item.dataset.projectTitle || '项目';
   const intro = item.dataset.projectIntro || '项目介绍待补充。';
   const detail = item.dataset.projectIntroDetail || '详细介绍待补充。';
@@ -82,15 +96,22 @@ projectItems.forEach((item) => {
       openProjectModal(title, intro, detail, images, link, linkText);
     }
   });
-});
+}
 
-projectModalClose.addEventListener('click', closeProjectModal);
+projectItems.forEach(bindModalTrigger);
+timelineItems.forEach(bindModalTrigger);
 
-projectModalBackdrop.addEventListener('click', (event) => {
-  if (event.target === projectModalBackdrop) {
-    closeProjectModal();
-  }
-});
+if (projectModalClose) {
+  projectModalClose.addEventListener('click', closeProjectModal);
+}
+
+if (projectModalBackdrop) {
+  projectModalBackdrop.addEventListener('click', (event) => {
+    if (event.target === projectModalBackdrop) {
+      closeProjectModal();
+    }
+  });
+}
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {

@@ -621,9 +621,14 @@ body::after {
   height: auto;
   max-height: 70vh;
   object-fit: contain;
+  object-position: center;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(10, 12, 16, 0.92);
+  background: transparent;
+}
+
+.project-modal-gallery img.double-height-image {
+  max-height: 140vh;
 }
 
 .project-modal-link {
@@ -635,6 +640,10 @@ body::after {
   border-radius: 999px;
   padding: 8px 12px;
   background: rgba(202, 165, 106, 0.12);
+}
+
+.project-modal-link[hidden] {
+  display: none !important;
 }
 
 .project-modal-close {
@@ -721,6 +730,25 @@ body::after {
   min-height: 70px;
 }
 
+.timeline-entry[role="button"] {
+  cursor: pointer;
+}
+
+.timeline-entry[role="button"] .timeline-panel {
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.timeline-entry[role="button"]:hover .timeline-panel,
+.timeline-entry[role="button"]:focus-visible .timeline-panel {
+  border-color: rgba(202, 165, 106, 0.6);
+  background: rgba(202, 165, 106, 0.12);
+  transform: translateY(-1px);
+}
+
+.timeline-entry[role="button"]:focus-visible {
+  outline: none;
+}
+
 .timeline-node {
   grid-column: 2;
   justify-self: center;
@@ -734,7 +762,7 @@ body::after {
 }
 
 .timeline-panel {
-  width: min(100%, 280px);
+  width: min(100%, 360px);
   padding: 14px 18px;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -751,10 +779,18 @@ body::after {
   text-transform: uppercase;
 }
 
+.timeline-panel p {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
 .timeline-entry-left .timeline-panel {
   grid-column: 1;
   justify-self: end;
-  text-align: right;
+  text-align: left;
 }
 
 .timeline-entry-right .timeline-panel {
